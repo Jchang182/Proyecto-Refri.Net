@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ProyectoRefri.Models.ProductoModel>
+
+<link href="~/css/site.css" rel="stylesheet" />
+
+@{
+    ViewData["Title"] = "ListarCliente";
+}
+
+
+    <div class="contenedorimg">
+        <h2>PRODUCTOS</h2>
+    </div>
+    <div class="container">
+
+    <!--INPUT BUSCAR-->
+        <div class="input-group mb-3 mt-3">
+            <input type="text" class="form-control" placeholder="Buscar Producto" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+        </div>
+
+    </div>
+
+<div class="container">
+    <div class="listaProductos">
+        <!-- AQUI VA EL FOR PARA REPETIR ESTA CARTA -->
+
+        <div class="card" style="flex-direction: row;">
+            <img src="../img/1.png" class="card-img-top cuadrado">
+            <div class="card-body">
+                <h5 class="card-title">Producto1</h5>
+                <p class="card-text">Aqui va la descripcion del producto</p>
+                <a href="@Url.Action("ListarCliente", "Producto")" class="btn btn-info">Refri</a>
+                <a href="#" class="btn btn-success">Comprar</a>
+            </div>
+        </div>
+        <div class="card" style="flex-direction: row;">
+            <img src="../img/1.png" class="card-img-top cuadrado">
+            <div class="card-body">
+                <h5 class="card-title">Producto1</h5>
+                <p class="card-text">Aqui va la descripcion del producto</p>
+                <a href="#" class="btn btn-info">Refri</a>
+                <a href="#" class="btn btn-success">Comprar</a>
+            </div>
+        </div><div class="card" style="flex-direction: row;">
+            <img src="../img/1.png" class="card-img-top cuadrado">
+            <div class="card-body">
+                <h5 class="card-title">Producto1</h5>
+                <p class="card-text">Aqui va la descripcion del producto</p>
+                <a href="#" class="btn btn-info">Refri</a>
+                <a href="#" class="btn btn-success">Comprar</a>
+            </div>
+        </div><div class="card" style="flex-direction: row;">
+            <img src="../img/1.png" class="card-img-top cuadrado">
+            <div class="card-body">
+                <h5 class="card-title">Producto1</h5>
+                <p class="card-text">Aqui va la descripcion del producto</p>
+                <a href="#" class="btn btn-info">Refri</a>
+                <a href="#" class="btn btn-success">Comprar</a>
+            </div>
+        </div>
+        
+    
+    
+
+    </div>
+</div>
+
+
+

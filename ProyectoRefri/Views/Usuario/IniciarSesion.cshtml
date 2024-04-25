@@ -1,0 +1,52 @@
+﻿@model ProyectoRefri.Models.UsuarioModel
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProyectoRefri</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProyectoRefri.styles.css" asp-append-version="true" />
+</head>
+<body>
+<div class="bg-black overlay">
+    <div class="overlay_contenido"></div>
+</div>
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh; position: relative;">
+    <div class="p-4 pt-5 container-form">
+        <div class="text-center">
+            <h1>Inicia Sesion</h1>
+        </div>
+        <form asp-action="IniciarSesion" class="mt-5">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-4">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-4">
+                <label asp-for="contrasena" class="control-label"></label>
+                <input asp-for="contrasena" type="password" class="form-control" />
+                <span asp-validation-for="contrasena" class="text-danger"></span>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <button type="submit" value="Create" class="btn-log">Iniciar Sesion</button>
+            </div>
+        </form>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                <p>¿No tienes una cuenta? <a href="/Usuario/Registrar"><strong>Registrate</strong></a></p>
+            </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

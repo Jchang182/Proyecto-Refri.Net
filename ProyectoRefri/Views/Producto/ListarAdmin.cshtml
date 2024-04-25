@@ -1,0 +1,137 @@
+﻿@model IEnumerable<ProyectoRefri.Models.ProductoModel>
+@{
+    ViewData["Title"] = "ListarAdmin";
+}
+<div>
+    <div class="contenedorimgRec">
+        <div>
+            <br><br><br>
+            <h2>ASI COMO<br>EN CASA,<br>ASI ES... </h2>
+        </div>
+        <div class="contCirculos">
+            <div class="circulo uno">
+            </div>
+            <div class="circulo dos">
+                <p class="mt-5">¡Descubre nuevas <br>recetas, añade las tuyas <br>y comparte tu pasión por<br> la cocina<br> con el mundo!</p>
+                <a href="#" class="btn btn-success">Crear Receta</a>
+            </div>
+        </div>
+    </div>
+</div>
+<h1>Listado Productos</h1>
+
+<p>
+    <a asp-action="Create">Nuevo Producto</a>
+</p>
+<table class="table table-bordered">
+    <thead class="table-light">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.estado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                ID1
+            </td>
+            <td>
+                Producto1
+            </td>
+            <td>
+                10.0
+            </td>
+            <td>
+                10
+            </td>
+            <td>
+                BLABLABLABLABLABLABLABLBLA
+            </td>
+            <td>
+                https:blablablalbalbla
+            </td>
+            <td>
+                1
+            </td>
+            <td>
+                <a asp-action="#" asp-controller="#" class="btn btn-danger">Eliminar</a> |
+                <a asp-action="#" asp-controller="#" class="btn btn-warning">Modificar</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ID2
+            </td>
+            <td>
+                Producto2
+            </td>
+            <td>
+                20.0
+            </td>
+            <td>
+                20
+            </td>
+            <td>
+              <p></p>
+            </td>
+            <td>
+                https:blablablalbalbla
+            </td>
+            <td>
+                1
+            </td>
+            <td>
+                <a asp-action="#" asp-controller="#" class="btn btn-danger">Eliminar</a> |
+                <a asp-action="#" asp-controller="#" class="btn btn-warning">Modificar</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ID3
+            </td>
+            <td>
+                Producto3
+            </td>
+            <td>
+                30.0
+            </td>
+            <td>
+                30
+            </td>
+            <td>
+                BLABLABLABLABLABLABLABLBLA
+            </td>
+            <td>
+                https:blablablalbalbla
+            </td>
+            <td>
+                1
+            </td>
+            <td>
+                <a asp-action="#" asp-controller="#" class="btn btn-danger">Eliminar</a> |
+                <a asp-action="#" asp-controller="#" class="btn btn-warning">Modificar</a>
+            </td>
+        </tr>
+<!--}-->
+    </tbody>
+</table>

@@ -1,0 +1,41 @@
+﻿
+<link href="~/css/site.css" rel="stylesheet" />
+@{
+    ViewData["Title"] = "RefriContenido";
+}
+
+
+<div class="container">
+    <br /><br />
+    <h2 class="mt-5">Refrigeradora</h2>
+    
+    <a href="#" class="btn btn-success my-2">Seguir Agregando</a>
+
+    <div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col"></th>
+                <th scope="col" colspan="2">Comida</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Accion</th>
+            </tr>
+        </thead>
+        <!--AQUI SE TRAEN LOS PRODUCTOS-->
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>img</th>
+                <td colspan="2">Atun</td>
+                <td>3</td>
+                <td>
+                    <a href="#" class="btn btn-success btn-circle btn-lg">+</a>
+                    <a href="#" class="btn btn-danger btn-circle btn-lg">-</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+

@@ -1,0 +1,82 @@
+﻿@model ProyectoRefri.Models.RecetaModel
+
+@{
+    ViewData["Title"] = "Registrar";
+}
+
+<div class="container mt-5">
+    <br />
+    <h4>Registrar Receta</h4>
+    <hr />
+    <div>
+        <a style="font-size:1.2em;text-decoration:none;" asp-action="Lista">Regresar</a>
+    </div>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Registrar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="idReceta" class="control-label"></label>
+                <input asp-for="idReceta" class="form-control rounded-pill bg-light" />
+                <span asp-validation-for="idReceta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nombre" class="control-label"></label>
+                <input asp-for="nombre" class="form-control rounded-pill bg-light" />
+                <span asp-validation-for="nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="imagen" class="control-label"></label>
+                <!--<input asp-for="imagen" class="form-control" />-->
+                <input asp-for="imagen" type="file" class="form-control rounded-pill bg-light" />
+                <span asp-validation-for="imagen" class="text-danger"></span>
+            </div>
+            <table class="table table-hover" id="tableProducto">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                            <th colspan="2"><button class="btn" onclick="agregarFila()"><i class="fa-solid fa-circle-plus fa-2xl" style="color: #1dc11a;"></i></button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select class="form-select">
+                                <option value="-1">elige un producto</option>
+                                <option value="1">opcion 1</option>
+                                <option value="2">opcion 2</option>
+                                <option value="3">opcion 3</option>
+                            </select>
+                        </td>
+                        <td><input class="form-control" type="text" /></td>
+                        <td><input class="form-control" type="text" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-group">
+                <label asp-for="preparacion" class="control-label"></label>
+                <textarea rows="10" cols="4" asp-for="preparacion" class="form-control"> </textarea>
+                <span asp-validation-for="preparacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Registrar" class="btn btn-primary mt-3" />
+                <a class="btn btn-danger mt-3" href="#">Cancelar</a>
+            </div>
+        </form>
+    </div>
+        <div class="col-2"></div>
+        <div class="col-4">
+            <!-- <img src="~/img/productoIcon.png"/>-->
+            <div class="iconPage">
+                <img class="" src="~/img/recetaIconPage.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

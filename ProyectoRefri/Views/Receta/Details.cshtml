@@ -1,0 +1,67 @@
+﻿@model ProyectoRefri.Models.RecetaModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<style>
+    .img-container {
+        text-align: center;
+    }
+</style>
+<br />
+<br />
+<!--BANER INDEX-->
+<div>
+    <div class="contenedorimgRec">
+        <div>
+            <br><br><br>
+            <h2>ASI COMO<br>EN CASA,<br>ASI ES... </h2>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<div>
+    <h1>@Html.DisplayFor(model => model.nombre)</h1>
+    <hr />
+    <div class="row" style="background-color: wheat">
+        <div class="col-md-6", style="text-align: center;">
+            <img class="iconPage" src="https://chewinghappiness.com/wp-content/uploads/2019/08/Tallarin-Rojo-2.jpg" />
+        </div>
+        <div class="col md-6" , style="text-align: left;">
+            <p>INGREDIENTES:</p>
+            <ol>
+                <li>Ingrendiente numero 1</li>
+                <li>Ingrendiente numero 2</li>
+                <li>Ingrendiente numero 3</li>
+                <li>Ingrendiente numero 4</li>
+                <li>Ingrendiente numero 5</li>
+                <li>Ingrendiente numero 6</li>
+            </ol>
+        </div>
+    </div>
+    <br />
+    <dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.preparacion)
+        </dt>
+        <br />
+        <dd class = "col-sm-2">
+            <!--Eliminar cuando se llame correctamente a una receta -->
+            <ol>
+                <li>Paso numero 1</li>
+                <li>Paso numero 2</li>
+                <li>Paso numero 3</li>
+                <li>Paso numero 4</li>
+                <li>Paso numero 5</li>
+                <li>Paso numero 6</li>
+            </ol>
+            @Html.DisplayFor(model => model.preparacion)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new {/*id = Model.idReceta*/  }) |
+    <a asp-action="#" asp-controller="#" class="btn btn-danger">Regresar</a>
+</div>

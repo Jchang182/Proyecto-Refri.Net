@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Carrito";
+}
+
+<div class="row mt-5 pt-5 p-2">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="product-details mr-2">
+                        <div class="d-flex justify-content-between">
+                            <span class="ml-2">Detalle Compra</span>
+                            <a class="btn btn-danger" href="@Url.Action("ListarCliente","Producto")">Volver</a>
+                        </div>
+                        <hr class="mt-2 mb-2">
+                        <div class="justify-content-start mb-2">
+                            Tienes <span id="cantidad-articulos" class="ml-1">0</span> artículo(s) en tu carrito
+                        </div>
+                        <div id="productos-seleccionados">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="payment-info">
+                                        <div class="d-flex justify-content-between information"><span>Total a Pagar</span><span id="totalPagar">S/. 0</span></div>
+                                        <button class="btn btn-primary btn-block mt-3" id="btnProcesarPago" type="button">Procesar Pago</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

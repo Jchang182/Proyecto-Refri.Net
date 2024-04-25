@@ -1,0 +1,73 @@
+﻿@model ProyectoRefri.Models.UsuarioModel
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProyectoRefri</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProyectoRefri.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+<div class="bg-black overlay">
+    <div class="overlay_contenido"></div>
+</div>
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh; position: relative;">
+    <div class="p-4 pt-5 container-form">
+        <h1>Registrar</h1>
+        <form class="mt-5" asp-action="Registrar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="form-group mb-4 col">
+                    <label asp-for="nombres" class="control-label"></label>
+                    <input asp-for="nombres" class="form-control" />
+                    <span asp-validation-for="nombres" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-4 col">
+                    <label asp-for="apellidos" class="control-label"></label>
+                    <input asp-for="apellidos" class="form-control" />
+                    <span asp-validation-for="apellidos" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-4 col">
+                    <label asp-for="telefono" class="control-label"></label>
+                    <input asp-for="telefono" class="form-control" />
+                    <span asp-validation-for="telefono" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-4 col">
+                    <label asp-for="email" class="control-label"></label>
+                    <input asp-for="email" class="form-control" />
+                    <span asp-validation-for="email" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-4 col">
+                <label asp-for="contrasena" class="control-label"></label>
+                <input asp-for="contrasena" class="form-control" />
+                <span asp-validation-for="contrasena" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <button type="submit" value="Create" class="btn-log">Registrarse</button>
+            </div>
+        </form>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                <p>¿Ya tienes una cuenta? <a href="/Usuario/IniciarSesion"><strong>Inicia sesion</strong></a></p>
+            </div>
+    </div>
+</div>
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

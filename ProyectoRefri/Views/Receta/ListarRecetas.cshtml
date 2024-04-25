@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ProyectoRefri.Models.RecetaModel>
+
+<div class="container margen-alto">
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idReceta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.preparacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idReceta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.imagen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.preparacion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idReceta }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idReceta })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
